@@ -1,0 +1,15 @@
+<p><img [src]="user.photo" [alt]="" /></p>
+<p>{{ user.name }} !</p>
+<p>{{ user.firstName }}</p>
+<p>citation:{{ user.quote }}</p>
+
+<input
+  type="text"
+  pInputText
+  class="ui-widget ui-text"
+  [(ngModel)]="user.quote"
+  placeholder="Quote"
+/>
+
+<p *ngIf="user.isAgeHidden">age : {{ user.age }}</p>
+<button (click)="ageVisibility()">Masquer l'age</button>
